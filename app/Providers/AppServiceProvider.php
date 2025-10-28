@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
                 return [
                     'http://localhost:3000',
-                    'https://nuxt3-app-taupe-zeta.vercel.app',
+                    'https://nuxt3-sanctum-production.up.railway.app',
                 ];
             });
 
