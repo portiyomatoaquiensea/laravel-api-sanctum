@@ -13,7 +13,7 @@ use App\Services\CustomerGameIdService;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Validator;
 
-class CasinoController extends Controller
+class PokerController extends Controller
 {
 
     protected $lockBonusService;

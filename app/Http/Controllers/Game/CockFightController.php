@@ -13,7 +13,7 @@ use App\Services\CurlService;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Validator;
 
-class CasinoController extends Controller
+class CockFightController extends Controller
 {
 
     protected $lockBonusService;

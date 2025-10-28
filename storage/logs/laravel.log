@@ -2618,3 +2618,7 @@
 #49 C:\\PHP\\sk5\\laravel-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\PHP\\\\sk5\\\\lara...')
 #50 {main}
 "} 
+[2025-10-28 14:32:05] local.ERROR: Cannot declare class App\Http\Controllers\Game\CasinoController, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Http\\Controllers\\Game\\CasinoController, because the name is already in use at C:\\Laravel\\nuxt3-laravel-sanctum\\laravel-api\\app\\Http\\Controllers\\Game\\PokerController.php:16)
+[stacktrace]
+#0 {main}
+"} 
