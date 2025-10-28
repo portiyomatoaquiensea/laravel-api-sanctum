@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
                 return [
                     'http://localhost:3000',
-                    'https://nuxt3-rn2bjzp85-naratouchs-projects.vercel.app',
+                    'https://nuxt3-app-taupe-zeta.vercel.app',
                 ];
             });
 
