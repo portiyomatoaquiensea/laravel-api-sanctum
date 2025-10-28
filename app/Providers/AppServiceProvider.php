@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
                 return [
                     'http://localhost:3000',
-                    'https://amiable-enjoyment-production-3cdb.up.railway.app',
+                    'https://nuxt3-rn2bjzp85-naratouchs-projects.vercel.app',
                 ];
             });
 
