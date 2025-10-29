@@ -6,16 +6,9 @@ return [
     |--------------------------------------------------------------------------
     | Cross-Origin Resource Sharing (CORS) Configuration
     |--------------------------------------------------------------------------
-    |
-    | Here you may configure your settings for cross-origin resource sharing
-    | or "CORS". This determines what cross-origin operations may execute
-    | in web browsers. You are free to adjust these settings as needed.
-    |
-    | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-    |
     */
 
-    // 'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    // Routes that require CORS
     'paths' => [
         'api/*',
         'sanctum/csrf-cookie',
@@ -25,10 +18,15 @@ return [
 
     'allowed_methods' => ['*'],
 
-    // 'allowed_origins' => ['*'],
-    'allowed_origins' => ['*'],
+    // Replace '*' with your exact Nuxt3 frontend domain
+    'allowed_origins' => [
+        'https://nuxt3-sanctum-production-f4df.up.railway.app',
+    ],
 
-    'allowed_origins_patterns' => [],
+    // Optional: allow subdomains via regex
+    'allowed_origins_patterns' => [
+        // '/\.up\.railway\.app$/', // if you need wildcard subdomains
+    ],
 
     'allowed_headers' => ['*'],
 
@@ -36,6 +34,6 @@ return [
 
     'max_age' => 0,
 
+    // Required for cookie-based auth
     'supports_credentials' => true,
-
 ];

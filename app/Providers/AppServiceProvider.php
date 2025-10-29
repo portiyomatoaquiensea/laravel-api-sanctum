@@ -59,7 +59,7 @@ class AppServiceProvider extends ServiceProvider
             \Illuminate\Support\Facades\Event::listen(
                 \Illuminate\Routing\Events\RouteMatched::class,
                 function ($event) use ($domains) {
-                    // $request = $event->request; // Illuminate\Http\Request
+                    $request = $event->request; // Illuminate\Http\Request
                     // $origin = $request->getSchemeAndHttpHost();
                     // // Block if origin is missing or not in allowed domains
                     // if (!$origin || !in_array($origin, $domains)) {
