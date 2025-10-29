@@ -59,13 +59,18 @@ class AppServiceProvider extends ServiceProvider
             \Illuminate\Support\Facades\Event::listen(
                 \Illuminate\Routing\Events\RouteMatched::class,
                 function ($event) use ($domains) {
-                    $request = $event->request; // Illuminate\Http\Request
-                    $origin = $request->getSchemeAndHttpHost();
-                    // Block if origin is missing or not in allowed domains
-                    if (!$origin || !in_array($origin, $domains)) {
-                        abort(response()->json([
-                            'message' => 'Access denied: invalid origin.'
-                        ], 403));
+                    // $request = $event->request; // Illuminate\Http\Request
+                    // $origin = $request->getSchemeAndHttpHost();
+                    // // Block if origin is missing or not in allowed domains
+                    // if (!$origin || !in_array($origin, $domains)) {
+                    //     abort(response()->json([
+                    //         'message' => 'Access denied: invalid origin.'
+                    //     ], 403));
+                    // }
+
+                    $origin = $request->headers->get('Origin');
+                    if ($origin && !in_array($origin, $domains)) {
+                        abort(response()->json(['message' => 'Access denied: invalid origin.'], 403));
                     }
                 }
             );
